@@ -2,6 +2,12 @@ import { defineConfig } from "tinacms";
 import { schema } from "./schema";
 
 export const config = defineConfig({
+  tinaioConfig: {
+    frontendUrlOverride: "https://app.tinajs.dev",
+    identityApiUrlOverride: "https://identity.tinajs.dev",
+    contentApiUrlOverride: "https://content.tinajs.dev",
+    assetsApiUrlOverride: "https://assets-api.tinajs.dev",
+  },
   schema,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   branch:
